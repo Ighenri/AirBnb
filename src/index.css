@@ -50,10 +50,7 @@ section{
   width: 15px;
   margin-right: .5rem;
 }
-.ratecont{
-  /* display: flex;
-  flex-direction: column; */
-}
+
 .amount{
   font-weight: 600;
 }

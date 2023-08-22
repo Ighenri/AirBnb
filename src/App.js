@@ -1,20 +1,25 @@
-import Header from './Header';
-import Hero from './Hero'
-import Card from './Card'
+import Header from './components/Header';
+import Hero from './components/Hero'
+import Card from './components/Card'
+import data from './components/data'
 
 function App() {
+  const newCard = data.map(item => {
+    return (
+      <Card
+        key = {item.id}
+        item = {item}
+      />
+
+    )
+    
+  })
+
   return (
     <div className="App">
       <Header />
       <Hero />
-      <Card 
-        img = "image1.png"
-        rating = "5.0"
-        reviewCount = {6}
-        country = "Nigeria"
-        title = "Life lesson eith katie zaferes"
-        price = {136}
-      />
+      {newCard}
     </div>
   );
 }
